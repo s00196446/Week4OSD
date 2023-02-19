@@ -5,18 +5,15 @@ WORKDIR /Week4Docker
 
 COPY packages*.json ./
 
-## Remove default nginx website  
 RUN npm install
 
 COPY . .
 
-## Copy over the artifacts in dist folder to default nginx public folder  
 RUN npm run build
 
 FROM nginx:latest
 
 COPY --from=builder /Week4Docker/dist/week4-docker /usr/share/nginx/html
-## nginx will run in the forground 
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
