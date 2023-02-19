@@ -1,5 +1,5 @@
 # Use nginx to serve the application ##
-FROM node:14.17.6 AS builder
+FROM node:16.16.0 AS builder
 
 WORKDIR /Week4Docker
 
