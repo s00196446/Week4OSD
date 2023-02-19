@@ -15,7 +15,7 @@ RUN npm run build
 
 FROM nginx:latest
 
-COPY --from=builder /Week4Docker/dist/Week4Docker /usr/share/nginx/html
+COPY --from=builder /Week4Docker/dist/week4-docker /usr/share/nginx/html
 ## nginx will run in the forground 
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
