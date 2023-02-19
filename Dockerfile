@@ -3,7 +3,7 @@ FROM node:14.17.6 AS builder
 
 WORKDIR /Week4Docker
 
-COPY packages*.json ./
+COPY package*.json ./
 
 RUN npm install
 
